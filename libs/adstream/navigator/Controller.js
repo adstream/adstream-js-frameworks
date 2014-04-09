@@ -24,7 +24,7 @@ dojo.declare('adstream.navigator.Controller', [dijit._Widget], {
 	},
 
 	onHashChanged: function() {
-		var hash = dojo.hash(),
+		var hash = dojo.hash().replace(/^\//, ''),
 			mapped = hash && this.mapper( hash );
 
 		if( !mapped ) {
